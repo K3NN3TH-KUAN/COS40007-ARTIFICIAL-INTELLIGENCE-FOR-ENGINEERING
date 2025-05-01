@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['Axia']
+
+roboflow:
+  workspace: axia-detection
+  project: perodua-axia-detection
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/axia-detection/perodua-axia-detection/dataset/1
