@@ -8,6 +8,6 @@ names: ['Axia']
 roboflow:
   workspace: axia-detection
   project: perodua-axia-detection
-  version: 1
+  version: 2
   license: CC BY 4.0
-  url: https://universe.roboflow.com/axia-detection/perodua-axia-detection/dataset/1
+  url: https://universe.roboflow.com/axia-detection/perodua-axia-detection/dataset/2
