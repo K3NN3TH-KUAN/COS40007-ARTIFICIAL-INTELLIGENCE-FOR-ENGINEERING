@@ -1,0 +1,6 @@
+train: ../CarModel/train/images
+val: ../CarModel/valid/images
+test: ../CarModel/test/images
+
+nc: 5
+names: ['Perodua Axia', 'Perodua Bezza', 'Perodua Myvi', 'Perodua Ativa', 'Toyota Vios']
