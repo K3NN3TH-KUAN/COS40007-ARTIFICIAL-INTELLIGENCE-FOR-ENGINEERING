@@ -1,0 +1,6 @@
+train: ../Yolov8_obb/train/images
+valid: ../Yolov8_obb/valid/images
+test: ../Yolov8_obb/test/
+
+nc: 5
+names: ['Perodua Axia', 'Perodua Bezza', 'Perodua Myvi', 'Perodua Ativa', 'Toyota Vios']
