@@ -1,6 +1,0 @@
-train: ../Yolov12/train/images
-valid: ../Yolov12/valid/images
-test: ../Yolov12/test/
-
-nc: 5
-names: ['Perodua Axia', 'Perodua Bezza', 'Perodua Myvi', 'Perodua Ativa', 'Toyota Vios']
