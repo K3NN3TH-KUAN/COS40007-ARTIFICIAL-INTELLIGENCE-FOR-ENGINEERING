@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['PeroduaAtiva', 'PeroduaAxia', 'PeroduaBezza', 'PeroduaMyvi', 'ToyotaVios']
+
+roboflow:
+  workspace: car-model-64qum
+  project: car_model-b9rnx
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/car-model-64qum/car_model-b9rnx/dataset/1
