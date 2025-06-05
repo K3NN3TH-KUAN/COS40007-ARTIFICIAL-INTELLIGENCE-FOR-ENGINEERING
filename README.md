@@ -1,4 +1,5 @@
 # COS40007-ARTIFICIAL-INTELLIGENCE-FOR-ENGINEERING
+# Theme 1: Smart Campus / Campus Monitoring System
 # 🚗 Object Detection Model Comparison using YOLO Variants
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
@@ -38,9 +39,10 @@ COS40007-ARTIFICIAL-INTELLIGENCE-FOR-ENGINEERING/
 ├── 📂 yolov11/             # YOLOv11 implementation
 ├── 📂 yolov12/             # YOLOv12 implementation
 ├── 🏆 best_model/          # Best performing model
-├── 📊 Model_Evaluation_Result/  # Evaluation metrics and results
-├── 📸 Car_videos_images/   # Dataset examples
-└── 📝 ipynb_scripts/       # Google Colab notebooks
+├── 📊 Model_Evaluation_Result/  # Evaluation metrics and results (validation and testing)
+├── 📸 Car_videos_images/   # Car and video examples 
+├── 📝 ipynb_scripts/       # Google Colab notebooks + AI demonstrator script
+└── 📸 AI_output_video/     # Output videos for Gradio 
 ```
 
 ## 🤖 Models Implemented
@@ -93,6 +95,7 @@ The `ipynb_scripts/` folder contains Google Colab notebooks for:
 - 🎯 Model training
 - 📊 Evaluation
 - 🔍 Inference
+- 🎯 AI Demonstrator running on Gradio interface
 
 ## ✨ Model Evaluation and Results
 
@@ -103,15 +106,18 @@ The `ipynb_scripts/` folder contains Google Colab notebooks for:
 - F1-Score
 
 ### 📈 Results Visualization
-| Model Version | Epochs | mAP50 | Precision | Recall | Inference Speed | Notes |
-|--------------|--------|-------|-----------|---------|-----------------|--------|
-| YOLOv5 | 30 | 0.951 | 0.935 | 0.779 | 14.8ms/img | Lightweight and fast, but slightly lower recall than newer versions |
-| YOLOv8 | 30 | 0.961 | 0.833 | 0.897 | 16ms/img | Balanced performance; improved mAP and recall; ideal for general use |
-| YOLOv9 | 30 | 0.973 | 0.897 | 0.854 | 12.2ms/img | Highest mAP; best for accuracy-focused tasks; slightly slower |
-| YOLOv11 | 30 | 0.964 | 0.907 | 0.922 | 5.6ms/img | Fastest inference; suitable for real-time scenarios with good recall |
-| YOLOv12 | 30 | 0.964 | 0.931 | 0.886 | 9.5ms/img | High precision and recall balance; moderate speed and performance |
+<div align="center">Model evaluation in validation dataset</div>
 
-<div align="center">Test in new testing dataset</div>
+|Models |	mAP50	| Precision and Recall |	F1-Score | Inference Time |
+|--------------|--------|-------|-----------|---------|
+|yolov5lu	| 0.907	| 0.951	| 0.81 | 	33.8ms |
+|yolov8l	| 0.964	| 0.961	| 0.87 | 37.5ms |
+|yolov9m	| 0.933	| 0.973	| 0.85 |25.0ms | 
+|yolo11s	| 0.945	| 0.964	| 0.91 |9.9ms |
+|yolo12s	| 0.938	| 0.964	| 0.90 |13.1ms |
+
+
+<div align="center">Model evaluation in new testing dataset</div>
 
 ![image](https://github.com/user-attachments/assets/176fa254-e592-48ce-9486-b5d16bb8471e)
 
@@ -129,9 +135,6 @@ The `ipynb_scripts/` folder contains Google Colab notebooks for:
 
 # YOLOv5
 !git clone https://github.com/ultralytics/yolov5
-%cd yolov5
-!pip install -r requirements.txt
-%cd ..
 
 # Additional libraries
 !pip install opencv-python matplotlib pandas
@@ -236,7 +239,7 @@ graph LR
 2. **Confidence Adjustment** ⚖️
    ```python
    # Default threshold
-   DEFAULT_CONF_THRESHOLD = 0.55
+   DEFAULT_CONF_THRESHOLD = 0.50
    ```
 
 3. **Input Processing** 📥
