@@ -221,6 +221,8 @@ graph LR
 ### 🚀 Quick Start Guide
 
   ![image](https://github.com/user-attachments/assets/f9d56243-2cf5-44f1-9122-25dfa05362a5)
+  ![image](https://github.com/user-attachments/assets/6646bb6d-2f05-4dfa-9f34-ea189d8f562d)
+
 
 #### Step-by-Step Usage
 
